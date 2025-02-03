@@ -10,37 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/get_next_line.h"
+#include "get_next_line.h"
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
-}
-
-void	ft_bzero(void *s, size_t n)
-{
-	while (n--)
-		*(char *)s++ = 0;
-}
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	unsigned char	*d;
-	unsigned char	*s;
-
-	if (!dst && !src)
-		return (NULL);
-	d = (unsigned char *)dst;
-	s = (unsigned char *)src;
-	while (n--)
-		*d++ = *s++;
-	return (dst);
-}
 
 char	*ft_partstrjoin(char *s1, char *s2, int *eol_loc)
 {

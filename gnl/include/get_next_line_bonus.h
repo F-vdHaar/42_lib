@@ -13,6 +13,7 @@
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
+# include <libft.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -30,9 +31,6 @@ char	*eof_residue(int fd, char *line, char *buffer, int *eol_posi);
 char	*copy_full_line(char *buffer, int *eol_posi);
 size_t	find_eol(char *line);
 
-size_t	ft_strlen(const char *s);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
 char	*ft_partstrjoin(char *s1, char *s2, int *eol_loc);
 void	shift_buffer(char *dst, const char *src, size_t dstsize);
 

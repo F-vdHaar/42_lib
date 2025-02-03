@@ -6,11 +6,11 @@
 /*   By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 22:25:47 by fvon-de           #+#    #+#             */
-/*   Updated: 2024/10/22 22:25:49 by fvon-de          ###   ########.fr       */
+/*   Updated: 2025/02/04 00:16:44 by fvon-de          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/get_next_line.h"
+#include "get_next_line.h"
 
 /* 
 static buffer 
