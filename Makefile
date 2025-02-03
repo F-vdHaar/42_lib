@@ -6,7 +6,7 @@
 #    By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/03 23:04:51 by fvon-de           #+#    #+#              #
-#    Updated: 2025/02/03 23:39:49 by fvon-de          ###   ########.fr        #
+#    Updated: 2025/02/04 00:04:43 by fvon-de          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ PRINTF_INC	= $(PRINTF_DIR)/include
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror -Wunused \
 			  -I$(INCLUDE) -I$(LIBFT_INC) -I$(GNL_INC) -I$(PRINTF_INC)
-DEBUG_FLAGS = -g -O0 -Wall -Wextra -Werror -fsanitize=address -fsanitize=undefined \
+DEBUG_FLAGS = $(CFLAGS) -g -O0 -fsanitize=address -fsanitize=undefined \
 			  -fno-strict-aliasing -fno-omit-frame-pointer -fstack-protector -DDEBUG -fno-inline
 AR			= ar rcs
 
