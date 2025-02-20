@@ -6,7 +6,7 @@
 /*   By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 14:32:05 by fvon-de           #+#    #+#             */
-/*   Updated: 2025/02/20 14:36:59 by fvon-de          ###   ########.fr       */
+/*   Updated: 2025/02/20 17:40:44 by fvon-de          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,16 @@ static int	get_sign_and_offset(const char *str, int *sign)
 static int	get_digit_value(char c, const char *base, int base_len)
 {
 	int	j;
+	int	lowered_c;
 
 	j = 0;
+	lowered_c = ft_tolower(c);
 	while (j < base_len)
 	{
-		if (ft_tolower(c) == base[j])
+		if (lowered_c == ft_tolower(base[j]))
+		{
 			return (j);
+		}
 		j++;
 	}
 	return (-1);
