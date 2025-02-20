@@ -6,7 +6,7 @@
 #    By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/03 23:04:51 by fvon-de           #+#    #+#              #
-#    Updated: 2025/02/04 00:04:43 by fvon-de          ###   ########.fr        #
+#    Updated: 2025/02/20 14:31:45 by fvon-de          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,8 @@ LIBFT_SRC	= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 			  ft_tolower.c ft_toupper.c ft_lstadd_back_bonus.c \
 			  ft_lstadd_front_bonus.c ft_lstclear_bonus.c ft_lstdelone_bonus.c \
 			  ft_lstiter_bonus.c ft_lstlast_bonus.c ft_lstmap_bonus.c \
-			  ft_lstnew_bonus.c ft_lstsize_bonus.c
+			  ft_lstnew_bonus.c ft_lstsize_bonus.c \
+			  ft_atoi_base
 
 GNL_SRC		= get_next_line.c get_next_line_utils.c \
 			  get_next_line_bonus.c get_next_line_utils_bonus.c

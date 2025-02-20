@@ -12,8 +12,6 @@
 
 #include "get_next_line.h"
 
-
-
 char	*ft_partstrjoin(char *s1, char *s2, int *eol_loc)
 {
 	char	*result;

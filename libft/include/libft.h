@@ -6,7 +6,7 @@
 /*   By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:35:52 by fvon-der          #+#    #+#             */
-/*   Updated: 2025/02/15 17:22:00 by fvon-de          ###   ########.fr       */
+/*   Updated: 2025/02/20 14:31:19 by fvon-de          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ char	**ft_split(char const *s, char c);
 // Conversion functions
 // from <stdlib.h>
 int		ft_atoi(const char *nptr);
+int		ft_atoi_base(const char *str, const char *base);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_itoa(int n);
 // traversing functions
