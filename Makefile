@@ -6,7 +6,7 @@
 #    By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/03 23:04:51 by fvon-de           #+#    #+#              #
-#    Updated: 2025/02/20 14:50:03 by fvon-de          ###   ########.fr        #
+#    Updated: 2025/02/21 21:10:19 by fvon-de          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ GNL_VERSION    ?= v1
 PRINTF_VERSION ?= v1
 
 # Source files
-LIBFT_SRC	= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
+LIBFT_SRC	= ft_atoi.c ft_atoi_base.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 			  ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 			  ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 			  ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c \

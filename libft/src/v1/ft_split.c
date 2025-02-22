@@ -6,7 +6,7 @@
 /*   By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:10:53 by fvon-der          #+#    #+#             */
-/*   Updated: 2025/02/15 17:00:19 by fvon-de          ###   ########.fr       */
+/*   Updated: 2025/02/22 18:40:30 by fvon-de          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,10 @@ char	**ft_split(char const *s, char c)
 	{
 		words[j] = ft_get_word(s, c, &i);
 		if (!words[j++])
-			return (ft_free_split(words, j - 1));
+		{
+			ft_free_split(words, j);
+			return (NULL);
+		}
 	}
 	words[j] = NULL;
 	return (words);
