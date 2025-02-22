@@ -6,7 +6,7 @@
 /*   By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:10:53 by fvon-der          #+#    #+#             */
-/*   Updated: 2025/02/22 18:45:43 by fvon-de          ###   ########.fr       */
+/*   Updated: 2025/02/22 20:49:22 by fvon-de          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,33 +20,47 @@ static char	**ft_free_split(char **words, int j);
 static int	ft_count_words(const char *s, char c)
 {
 	int	count;
-	int	i;
+	int	prev_char_is_delim;
 
 	count = 0;
-	i = 0;
-	while (s[i])
+	prev_char_is_delim = 1;
+	if (!s)
+		return (0);
+	while (*s)
 	{
-		if ((s[i] != c && (i == 0 || s[i - 1] == c))
-			|| (s[i] == '-' && s[i + 1] && s[i + 1] != c))
-			count++;
-		i++;
+		if (*s == c)
+		{
+			if (!prev_char_is_delim)
+				prev_char_is_delim = 1;
+		}
+		else
+		{
+			if (prev_char_is_delim)
+			{
+				count++;
+				prev_char_is_delim = 0;
+			}
+		}
+		s++;
 	}
 	return (count);
 }
 
 static char	*ft_get_word(const char *s, char c, int *i)
 {
-	int		start;
-	int		len;
+	int	start;
+	int	len;
 
+	start = *i;
+	len = 0;
 	while (s[*i] == c)
 		(*i)++;
 	start = *i;
-	if (s[*i] == '-')
-		(*i)++;
 	while (s[*i] && s[*i] != c)
+	{
 		(*i)++;
-	len = *i - start;
+		len++;
+	}
 	return (ft_substr(s, start, len));
 }
 
@@ -61,26 +75,29 @@ static char	**ft_free_split(char **words, int j)
 char	**ft_split(char const *s, char c)
 {
 	char	**words;
+	int		word_count;
 	int		i;
 	int		j;
 
 	if (!s)
 		return (NULL);
-	words = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	word_count = ft_count_words(s, c);
+	words = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (!words)
 		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
 	{
-		words[j] = ft_get_word(s, c, &i);
-		if (!words[j++])
+		if (s[i] != c)
 		{
-			ft_free_split(words, j);
-			return (NULL);
+			words[j] = ft_get_word(s, c, &i);
+			if (!words[j++])
+				return (ft_free_split(words, j - 1));
 		}
-	}
-	words[j] = NULL;
+		else
+			i++;
+	} words[j] = NULL;
 	return (words);
 }
 
