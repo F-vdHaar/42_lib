@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+        */
+/*   By: fvon-der <fvon-der@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:10:53 by fvon-der          #+#    #+#             */
-/*   Updated: 2025/02/22 20:49:22 by fvon-de          ###   ########.fr       */
+/*   Updated: 2025/02/25 18:04:07 by fvon-der         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,14 +75,14 @@ static char	**ft_free_split(char **words, int j)
 char	**ft_split(char const *s, char c)
 {
 	char	**words;
-	int		word_count;
+	int		wc;
 	int		i;
 	int		j;
 
 	if (!s)
 		return (NULL);
-	word_count = ft_count_words(s, c);
-	words = (char **)malloc((word_count + 1) * sizeof(char *));
+	wc = ft_count_words(s, c);
+	words = (char **)malloc((wc + 1) * sizeof(char *));
 	if (!words)
 		return (NULL);
 	i = 0;
@@ -95,10 +95,9 @@ char	**ft_split(char const *s, char c)
 			if (!words[j++])
 				return (ft_free_split(words, j - 1));
 		}
-		else
-			i++;
-	} words[j] = NULL;
-	return (words);
+		i += (s[i] == c);
+	}
+	return (words[j] = NULL, words);
 }
 
 // void	ft_print_split_result(char **result)
