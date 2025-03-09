@@ -6,7 +6,7 @@
 /*   By: fvon-der <fvon-der@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:07:41 by fvon-der          #+#    #+#             */
-/*   Updated: 2024/10/08 20:07:44 by fvon-der         ###   ########.fr       */
+/*   Updated: 2025/03/09 19:53:26 by fvon-der         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,28 @@ int	ft_isspace(char c)
 		|| c == '\v' || c == '\r' || c == '\f')
 		return (1);
 	return (0);
+}
+
+long	ft_atol(const char *str)
+{
+	int		sign;
+	long	result;
+
+	sign = 1;
+	result = 0;
+	while (*str && ft_isspace(*str))
+		str++;
+	if (*str == '-')
+	{
+		sign = -1;
+		str++;
+	}
+	else if (*str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
+	{
+		result = (result * 10) + (*str - '0');
+		str++;
+	}
+	return (result * sign);
 }
