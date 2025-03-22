@@ -33,5 +33,6 @@ size_t	find_eol(char *line);
 
 char	*ft_partstrjoin(char *s1, char *s2, int *eol_loc);
 void	shift_buffer(char *dst, const char *src, size_t dstsize);
+void	cleanup_get_next_line(void);
 
 #endif

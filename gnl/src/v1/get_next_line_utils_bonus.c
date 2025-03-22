@@ -51,3 +51,14 @@ void	shift_buffer(char *dst, const char *src, size_t dstsize)
 		dst[i] = '\0';
 	}
 }
+
+void	cleanup_get_next_line(void)
+{
+	static char	*buffer = NULL;
+
+	if (buffer)
+	{
+		free(buffer);
+		buffer = NULL;
+	}
+}
