@@ -6,7 +6,7 @@
 #    By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/03 23:04:51 by fvon-de           #+#    #+#              #
-#    Updated: 2025/02/21 21:10:19 by fvon-de          ###   ########.fr        #
+#    Updated: 2025/04/07 15:50:21 by fvon-de          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ PRINTF_VERSION ?= v1
 
 # Source files
 LIBFT_SRC	= ft_atoi.c ft_atoi_base.c ft_bzero.c ft_calloc.c ft_isalnum.c \
+LIBFT_SRC	= ft_atoi.c ft_atoi_base.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 			  ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 			  ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 			  ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c \
@@ -53,7 +54,7 @@ LIBFT_SRC	= ft_atoi.c ft_atoi_base.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 			  ft_lstadd_front_bonus.c ft_lstclear_bonus.c ft_lstdelone_bonus.c \
 			  ft_lstiter_bonus.c ft_lstlast_bonus.c ft_lstmap_bonus.c \
 			  ft_lstnew_bonus.c ft_lstsize_bonus.c \
-			  ft_atoi_base.c
+			  ft_atoi_base.c  ft_isxdigit.c
 
 GNL_SRC		= get_next_line.c get_next_line_utils.c \
 			  get_next_line_bonus.c get_next_line_utils_bonus.c
