@@ -6,7 +6,7 @@
 #    By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/03 23:04:51 by fvon-de           #+#    #+#              #
-#    Updated: 2025/04/07 15:50:21 by fvon-de          ###   ########.fr        #
+#    Updated: 2025/04/07 17:05:52 by fvon-de          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,6 @@ PRINTF_VERSION ?= v1
 
 # Source files
 LIBFT_SRC	= ft_atoi.c ft_atoi_base.c ft_bzero.c ft_calloc.c ft_isalnum.c \
-LIBFT_SRC	= ft_atoi.c ft_atoi_base.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 			  ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 			  ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 			  ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c \
@@ -62,7 +61,8 @@ GNL_SRC		= get_next_line.c get_next_line_utils.c \
 PRINTF_SRC	= ft_flags.c ft_print_char.c ft_print_flag.c ft_print_hex.c \
 			  ft_print_str.c ft_flags_utils.c ft_printf.c ft_printf_utoa.c \
 			  ft_print_int.c ft_print_unsigned.c ft_nbr_len.c ft_printf_itoa.c \
-			  ft_printf_xtoa.c ft_print_ptr.c
+			  ft_printf_xtoa.c ft_print_ptr.c ft_dprintf.c
+
 
 # Define object files
 LIBFT_OBJS		= $(LIBFT_SRC:%.c=$(LIBFT_DIR)/obj/$(LIBFT_VERSION)/%.o)

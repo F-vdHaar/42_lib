@@ -6,7 +6,7 @@
 /*   By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 22:25:47 by fvon-de           #+#    #+#             */
-/*   Updated: 2025/03/22 17:59:17 by fvon-de          ###   ########.fr       */
+/*   Updated: 2025/04/07 16:21:35 by fvon-de          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*get_next_line(int fd)
 	line = copy_full_line(buffer, &eol_loc);
 	if (!line)
 	{
-		free(line); 	
+		free(line);
 		return (NULL);
 	}
 	shift_buffer(buffer, &buffer[eol_loc + 1], BUFFER_SIZE + 1);

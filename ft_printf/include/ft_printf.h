@@ -6,7 +6,7 @@
 /*   By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:57:20 by fvon-de           #+#    #+#             */
-/*   Updated: 2025/02/03 23:55:05 by fvon-de          ###   ########.fr       */
+/*   Updated: 2025/04/07 17:19:30 by fvon-de          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,10 @@ int		ft_flag_precision(const char *str, int pos,
 /* ---------- PRINTF -------------------- */
 int		ft_printf(const char *format, ...);
 int		ft_print_arg(char type, va_list args, t_flags flags);
+
+/*------------NEW---------------------------*/
+/*------------DPRINTF------------------------*/
+int		ft_dprintf(int fd, const char *fmt, ...);
 
 /* ---------- PRINT SPECIFIERS ---------- */
 // c

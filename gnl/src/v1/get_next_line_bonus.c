@@ -6,7 +6,7 @@
 /*   By: fvon-de <fvon-der@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 20:05:51 by fvon-der          #+#    #+#             */
-/*   Updated: 2025/03/22 17:59:35 by fvon-de          ###   ########.fr       */
+/*   Updated: 2025/04/07 16:21:14 by fvon-de          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	*copy_full_line(char *buffer, int *eol_posi)
 	line = malloc(sizeof(char) * (len + 1));
 	if (!line)
 	{
-		free(line); 	
+		free(line);
 		return (NULL);
 	}
 	ft_memcpy(line, buffer, len);
